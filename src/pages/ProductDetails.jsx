@@ -296,7 +296,7 @@ return (
                   </label>
                   <input
                     type="text"
-                    placeholder="Your name here"
+                    placeholder="Enter Your name here"
                     required
                     autoComplete="name"
                     className="block py-2 px-3 border-2 border-[rgb(232,227,227)] rounded-[5px] w-full "
@@ -311,7 +311,7 @@ return (
                   </label>
                   <input
                     type="text"
-                    placeholder="Your email here"
+                    placeholder="Enter Your email here"
                     required
                     autoComplete="email"
                     className="block py-2 px-3 border-2 border-[rgb(232,227,227)] rounded-[5px] w-full "
@@ -327,7 +327,7 @@ return (
                   <textarea
                     name=""
                     id=""
-                    placeholder="Your name here"
+                    placeholder="Enter Your Review message here"
                     required
                     autoComplete="text"
                     className="block py-2 px-3 border-2 border-[rgb(232,227,227)] rounded-[5px] w-full "
