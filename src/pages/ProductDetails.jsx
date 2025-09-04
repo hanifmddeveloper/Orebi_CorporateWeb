@@ -5,6 +5,7 @@ import Container from "../components/Container";
 import { FaMinus, FaPlus, FaStar } from "react-icons/fa6";
 import { FaStarHalfAlt } from "react-icons/fa";
 import { FaRegStar } from "react-icons/fa6";
+import { TiMinus } from "react-icons/ti";
 import Oval1 from "../assets/Oval1.png";
 import Oval2 from "../assets/Oval2.png";
 import Oval3 from "../assets/Oval3.png";
@@ -218,7 +219,10 @@ return (
               <div className="">
                 <div className="flex items-center gap-[18%]">
                   <h2>FEATURES & DETAILS</h2>
-                  <FaPlus onClick={handleDetails} className="cursor-pointer" />
+                  <div onClick={handleDetails} className="cursor-pointer" >
+                    {showDetails == true ? <TiMinus /> : <FaPlus  />}
+                  {/* <FaPlus  /> */}
+                  </div>
                 </div>
                 <div className="">
                   {showDetails == true ? (
@@ -233,7 +237,9 @@ return (
               <div className="">
                 <div className="flex items-center gap-[17.5%]">
                   <h2>SHIPPING & RETURNS</h2>
-                  <FaPlus onClick={handleReturn} className="cursor-pointer" />
+                  <div onClick={handleReturn} className="cursor-pointer" >
+                  {showReturn == true ? <TiMinus /> : <FaPlus  />}
+                  </div>
                 </div>
                 <div className="">
                   {showReturn == true ? (

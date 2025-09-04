@@ -28,13 +28,13 @@ const Banner = () => {
     ),
     customPaging: i => (
       <div
-        style={{
-          width: "30px",
-          color: "black",
-          padding:'10px 0',
-          borderRight: "2px border border-[#fff] solid",
-          // color:"transparent",
-        }}
+        // style={{
+        //   width: "30px",
+        //   color: "black",
+        //   padding:'10px 0',
+        //   borderRight: "2px border border-[#2626262] solid",
+        // //  color:"transparent",
+        // }}
       >
         {i + 1}
       </div>
