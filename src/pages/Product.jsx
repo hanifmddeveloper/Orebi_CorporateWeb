@@ -25,7 +25,7 @@ let info = useContext(ApiData)
 
 
 let pageNumber = []
-  for(let i=0; i< Math.ceil(info.length / perPage);i++){
+  for(let i=0; i< Math.ceil(filterShow.length > 0 ? filterShow : info.length / perPage);i++){
    pageNumber.push(i)
   }
 // console.log(pageNumber); 
@@ -97,13 +97,14 @@ let handleListItem = ()=>{
           <div className='w-[80%]' >
           <div className='flex justify-between' >
            <div className="flex gap-5" >
-            <div onClick={handleListItem} className={`cursor-pointer ${listItem == "active" ? "text-[#262626] p-[5px] rounded-[5px] text-3xl bg-green-500 " : "text-black p-[5px] rounded-[5px] text-3xl bg-blue-50" }`}> 
-            <ImListNumbered /> 
-            </div>
-            <div onClick={()=>setListItem("")} className={`cursor-pointer ${listItem == "" ? "text-[#262626] p-[5px] rounded-[5px] text-3xl bg-green-500 " : "text-black p-[5px] rounded-[5px] text-3xl bg-blue-50" }`}>
+            <div onClick={()=>setListItem("")} className={`${listItem == "active" ? "" : "bg-green-500"} p-3 rounded-[3px]`}>
             <FaBorderAll />
             </div>
+            <div onClick={handleListItem } className={`${listItem == "active" ?  "bg-green-500" : ""} p-3 rounded-[3px]`} > 
+            <ImListNumbered /> 
             </div>
+            </div>
+            
           <div className=' flex  items-center ml-[350px]' >
           <labil className='pr-2' htmlFor="">Feature by:</labil>
            <select name='' id='' className='py-1 px-3 border border-[#262626]' >
